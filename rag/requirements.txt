@@ -1,0 +1,8 @@
+docling
+PyMuPDF
+openai
+pydantic
+python-dotenv
+openpyxl
+chromadb
+sentence-transformers

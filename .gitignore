@@ -1,0 +1,34 @@
+# Environments
+venv/
+venv311/
+.env
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+
+# Database, Uploads, and ML Models
+chroma_data/
+temp_uploads/
+data/
+rag/models/
+*.pth
+*.safetensors
+
+# Gradio cache
+.gradio/
+
+# Temporary/Log files
+chunks_session_*.txt
+chunks_session_*.json
+diff.txt
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

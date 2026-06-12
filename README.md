@@ -4,9 +4,8 @@ An AI-powered application designed to ingest, align, and analyze Request for Pro
 
 ## Architecture
 
-This project features a decoupled client-server architecture:
-- **Frontend**: A rich, interactive web UI built with Gradio (`app1.py`).
-- **Backend**: A robust API server built with FastAPI (`main.py`) that handles ChromaDB document ingestion and streams agent reasoning logic via NDJSON.
+This project features a unified architecture:
+- **Application**: A rich, interactive web UI built with Gradio that handles both user interaction, ChromaDB ingestion, and agent reasoning logic internally (`app.py`).
 
 ## Quick Start
 
@@ -18,20 +17,13 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Start the FastAPI Backend
-Open a terminal and run:
+### 2. Start the Application
+Open a terminal, activate your virtual environment, and run:
 ```bash
-uvicorn main:app --reload --port 8000
-```
-*(The API documentation will be available at `http://localhost:8000/docs`)*
-
-### 3. Start the Gradio Frontend
-Open a **second** terminal, activate your virtual environment, and run:
-```bash
-python app1.py
+python app.py
 ```
 *(The web UI will be available at `http://localhost:7860`)*
 
 ## Important Notes
-- Ensure your `.env` file is properly configured with your required API keys (e.g., OpenAI, Tavily) before starting the servers.
+- Ensure your `.env` file is properly configured with your required API keys (e.g., OpenAI, Tavily) before starting the application.
 - The `chroma_data/` directory is automatically generated upon your first document ingestion and is purposely excluded from source control due to file size.
